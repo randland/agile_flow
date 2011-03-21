@@ -1,3 +1,5 @@
+$LOAD_PATH.unshift(File.dirname(__FILE__) + '/../../lib')
+
 require 'bundler'
 begin
   Bundler.setup(:default, :development)
@@ -7,8 +9,7 @@ rescue Bundler::BundlerError => e
   exit e.status_code
 end
 
-$LOAD_PATH.unshift(File.dirname(__FILE__) + '/../../lib')
-require 'agile_flow'
-
 require 'rspec/expectations'
 require 'fuubar-cucumber'
+
+require 'agile_flow'

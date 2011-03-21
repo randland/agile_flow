@@ -7,13 +7,10 @@ rescue Bundler::BundlerError => e
   $stderr.puts "Run `bundle install` to install missing gems"
   exit e.status_code
 end
+
 require 'rake'
-
-Bundler.require(:default, :development)
-
 $:.unshift File.expand_path('lib')
 
-# load given tasks file, reporting errors without failing
 def load_tasks(tasks)
   load tasks
 rescue Exception => exception
