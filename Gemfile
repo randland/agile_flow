@@ -6,9 +6,10 @@ source "http://rubygems.org"
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
 group :development do
-  gem "rspec"
-  gem "cucumber"
-  gem "bundler"
-  gem "jeweler"
-  gem "rcov"
+  gem 'rspec'
+    gem 'fuubar'
+  gem 'cucumber'
+  gem 'bundler'
+  gem 'jeweler'
+  gem 'rcov'
 end
