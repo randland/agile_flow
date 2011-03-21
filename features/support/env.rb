@@ -11,3 +11,4 @@ $LOAD_PATH.unshift(File.dirname(__FILE__) + '/../../lib')
 require 'agile_flow'
 
 require 'rspec/expectations'
+require 'fuubar-cucumber'
