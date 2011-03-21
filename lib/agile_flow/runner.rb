@@ -19,7 +19,7 @@ class AgileFlow::Runner < AgileFlow #:nodoc:
     unless opts[:help]
 
       if opts[:name]
-        puts "Hi #{opts[:name]}!"
+        say_hi
       end
 
       if opts[:version]
@@ -40,14 +40,19 @@ class AgileFlow::Runner < AgileFlow #:nodoc:
   end
 
   def self.help
-    puts @opts.help
+    puts opts.help
+  end
+
+  def self.say_hi
+    puts "Hi, #{opts[:name]}!"
+  end
+
+  def self.verbose
+    puts opts.to_hash
   end
 
   def self.version
     puts "Agile Flow v.#{AgileFlow.version}"
   end
 
-  def self.verbose
-    puts opts.to_hash
-  end
 end
