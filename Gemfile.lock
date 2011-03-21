@@ -52,6 +52,7 @@ GEM
     ruby_core_source (0.1.4)
       archive-tar-minitar (>= 0.5.2)
     term-ansicolor (1.0.5)
+    thor (0.14.6)
 
 PLATFORMS
   ruby
@@ -65,3 +66,4 @@ DEPENDENCIES
   rcov
   rspec
   ruby-debug19
+  thor
