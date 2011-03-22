@@ -10,8 +10,10 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Nick Karpenske"]
   s.date = %q{2011-03-21}
+  s.default_executable = %q{agile}
   s.description = %q{This gem provides command line support for starting and finishing features in Pivotal Tracker. It includes commit message support for pairing, as well as Harvest timer components. The Git-Flow method of creating and completing features is used, and Cucumber features may be pulled and pushed via Pivotal Tracker.}
   s.email = %q{randland@gmail.com}
+  s.executables = ["agile"]
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.rdoc"
@@ -27,11 +29,13 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "agile_flow.gemspec",
+    "bin/agile",
     "config/cucumber.yml",
     "features/agile_flow.feature",
     "features/step_definitions/agile_flow_steps.rb",
     "features/support/env.rb",
     "lib/agile_flow.rb",
+    "lib/agile_flow/runner.rb",
     "lib/tasks/cucumber.rake",
     "lib/tasks/jeweler.rake",
     "lib/tasks/rdoc.rake",
@@ -54,6 +58,7 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<slop>, [">= 0"])
       s.add_development_dependency(%q<ruby-debug19>, [">= 0"])
       s.add_development_dependency(%q<rspec>, [">= 0"])
       s.add_development_dependency(%q<fuubar>, [">= 0"])
@@ -63,6 +68,7 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<jeweler>, [">= 0"])
       s.add_development_dependency(%q<rcov>, [">= 0"])
     else
+      s.add_dependency(%q<slop>, [">= 0"])
       s.add_dependency(%q<ruby-debug19>, [">= 0"])
       s.add_dependency(%q<rspec>, [">= 0"])
       s.add_dependency(%q<fuubar>, [">= 0"])
@@ -73,6 +79,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<rcov>, [">= 0"])
     end
   else
+    s.add_dependency(%q<slop>, [">= 0"])
     s.add_dependency(%q<ruby-debug19>, [">= 0"])
     s.add_dependency(%q<rspec>, [">= 0"])
     s.add_dependency(%q<fuubar>, [">= 0"])

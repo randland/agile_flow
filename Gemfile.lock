@@ -51,6 +51,7 @@ GEM
     ruby-progressbar (0.0.9)
     ruby_core_source (0.1.4)
       archive-tar-minitar (>= 0.5.2)
+    slop (1.2.0)
     term-ansicolor (1.0.5)
 
 PLATFORMS
@@ -65,3 +66,4 @@ DEPENDENCIES
   rcov
   rspec
   ruby-debug19
+  slop
